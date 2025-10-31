@@ -1,0 +1,15 @@
+@page "/component/paidcontent"
+@model web_demo.Pages.Component.PaidContentModel
+@{
+    Layout = null;
+}
+<div class="p-4" hx-get="/component/paidcontent" hx-trigger="loginStatusChanged from:body" hx-swap="outerHTML">
+    @if (Model.IsLoggedIn)
+    {
+        <p>Main content - Last loaded: @DateTime.Now.ToString("HH:mm:ss")</p>
+    }
+    else
+    {
+        <p class="text-gray-500 italic">Please log in to view this content.</p>
+    }
+</div>

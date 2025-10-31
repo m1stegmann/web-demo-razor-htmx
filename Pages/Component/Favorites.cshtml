@@ -1,0 +1,7 @@
+@page "/component/favorites"
+@{
+    Layout = null;
+}
+<div class="p-4" hx-get="/component/favorites" hx-trigger="loginStatusChanged from:body" hx-swap="outerHTML">
+    Favorites - Last loaded: @DateTime.Now.ToString("HH:mm:ss")
+</div>
