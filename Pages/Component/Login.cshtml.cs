@@ -20,7 +20,8 @@ namespace web_demo.Pages.Component
             Response.Cookies.Append("login", isLoggedIn ? "true" : "false");
 
             // Event auslösen, damit Content.cshtml neu lädt
-            Response.Headers.Append("HX-Trigger", "loginStatusChanged");
+            var eventName = isLoggedIn ? "userLoggedIn" : "userLoggedOut";
+            Response.Headers.Append("HX-Trigger", eventName);
         }
     }
 }

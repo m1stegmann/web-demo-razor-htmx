@@ -1,7 +1,12 @@
 @page "/component/favorites"
+@model web_demo.Pages.Component.FavoritesModel
 @{
     Layout = null;
 }
-<div class="p-4" hx-get="/component/favorites" hx-trigger="loginStatusChanged from:body" hx-swap="outerHTML">
-    Favorites - Last loaded: @DateTime.Now.ToString("HH:mm:ss")
+<div class="p-4" hx-get="/component/favorites" hx-trigger="userLoggedIn from:body, userLoggedOut from:body"
+    hx-swap="outerHTML">
+    @if (Model.IsLoggedIn)
+    {
+        <p>Favorites - Last loaded: @DateTime.Now.ToString("HH:mm:ss")</p>
+    }
 </div>
