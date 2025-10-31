@@ -8,7 +8,7 @@ namespace web_demo.Pages.Component
 
         public void OnGet()
         {
-            var loginCookie = Request.Cookies["login"];
+            string? loginCookie = Request.Cookies["login"];
             IsLoggedIn = loginCookie == "true";
         }
     }

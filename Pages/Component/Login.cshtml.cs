@@ -11,17 +11,13 @@ namespace web_demo.Pages.Component
         public void OnGet()
         {
             CurrentPath = Request.Path;
-            var status = Request.Query["status"].ToString();
+            string status = Request.Query["status"].ToString();
             DisplayText = status == "logout" ? "Logout" : "Login";
             NextStatus = status == "logout" ? "login" : "logout";
 
             // Cookie setzen
-            var isLoggedIn = status == "logout";
+            bool isLoggedIn = status == "logout";
             Response.Cookies.Append("login", isLoggedIn ? "true" : "false");
-
-            // Event auslösen, damit Content.cshtml neu lädt
-            var eventName = isLoggedIn ? "userLoggedIn" : "userLoggedOut";
-            Response.Headers.Append("HX-Trigger", eventName);
         }
     }
 }
