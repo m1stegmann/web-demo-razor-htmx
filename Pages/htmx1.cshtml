@@ -1,6 +1,6 @@
 @page
 @{
-    ViewData["Title"] = "HTMX";
+    ViewData["Title"] = "HTMX Demo";
 }
 
 <div class="flex gap-2">
@@ -9,21 +9,27 @@
     </div>
 </div>
 
-<div hx-get="/component/oob" hx-trigger="load delay:100ms" hx-swap="none"></div>
-
 <div class="flex gap-2">
-    <div id="teaser1" class="flex-1 h-24 bg-blue-600"></div>
-    <div id="teaser2" class="flex-1 h-24 bg-blue-600"></div>
-    <div id="teaser3" class="flex-1 h-24 bg-red-600"></div>
+    <div class="flex-1 h-24 bg-blue-600" hx-get="/component/teaser" hx-trigger="load, every 15s"></div>
+    <div class="flex-1 h-24 bg-blue-600" hx-get="/component/basket" hx-trigger="load"></div>
+    <div class="flex-1 h-24 bg-red-600" hx-get="/component/favorites" hx-trigger="userLoggedIn from:body"></div>
 </div>
 
-<div class="w-full h-48 bg-blue-600">
-    <div class="p-4">Kostenfreier Content</div>
+<div class="w-full bg-blue-600 p-4" hx-get="/component/content" hx-trigger="load">
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+        sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+        sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+        elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+        vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+        Lorem ipsum dolor sit amet.</p>
+
+    <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu
+        feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril
+        delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing
+        elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
 </div>
 
-<div class="flex gap-2">
-    <div id="content1" class="flex-1 h-24 bg-red-600"></div>
-    <div id="content2" class="flex-1 h-24 bg-blue-600"></div>
-</div>
-
-<div id="main1" class="w-full h-96 bg-red-600"></div>
+<div class="w-full h-96 bg-red-600" hx-get="/component/paidcontent" hx-trigger="userLoggedIn from:body"></div>

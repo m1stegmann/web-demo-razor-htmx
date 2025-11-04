@@ -15,8 +15,9 @@
     <div class="flex-1 h-24 bg-red-600" hx-get="/component/favorites" hx-trigger="userLoggedIn from:body"></div>
 </div>
 
-<div class="w-full h-48 bg-blue-600" hx-get="/component/content" hx-trigger="load" hx-swap="outerHTML">
-    <div class="p-4">Kostenfreier Content</div>
+<div class="w-full bg-blue-600 p-4">
+    <ul>
+        <li><a href="/htmx1">HTMX 1</a></li>
+        <li><a href="/htmx2">HTMX 2</a></li>
+    </ul>
 </div>
-
-<div class="w-full h-96 bg-red-600" hx-get="/component/paidcontent" hx-trigger="userLoggedIn from:body"></div>
