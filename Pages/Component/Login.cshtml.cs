@@ -13,7 +13,7 @@ namespace web_demo.Pages.Component
             CurrentPath = Request.Path;
             string status = Request.Query["status"].ToString();
 
-            // Status aus Query-Parameter oder Cookie ermitteln
+            // Determine status from query parameter or cookie
             bool isLoggedIn;
             if (!string.IsNullOrEmpty(status))
             {
@@ -32,7 +32,7 @@ namespace web_demo.Pages.Component
             DisplayText = isLoggedIn ? "Logout" : "Login";
             NextStatus = isLoggedIn ? "login" : "logout";
 
-            // Custom Header für HTMX Event-Trigger
+            // Custom header for HTMX event trigger
             Response.Headers.Append("HX-Trigger", isLoggedIn ? "userLoggedIn" : "userLoggedOut");
         }
     }
