@@ -46,11 +46,11 @@
 
         // HTMX triggert Events automatisch via HX-Trigger Header
         // Zusätzliches Logging für Debugging
-        document.body.addEventListener('userLoggedIn', function () {
+        document.addEventListener('userLoggedIn', function () {
             console.log('User logged in event triggered');
         });
 
-        document.body.addEventListener('userLoggedOut', function () {
+        document.addEventListener('userLoggedOut', function () {
             console.log('User logged out event triggered');
         });
     </script>
