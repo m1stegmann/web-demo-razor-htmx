@@ -15,8 +15,7 @@
     <div class="flex-1 h-24 bg-red-600" hx-get="/component/favorites" hx-trigger="userLoggedIn from:body"></div>
 </div>
 
-<div class="w-full bg-blue-600 p-4 lazy" hx-get="/component/content" hx-trigger="load, userLoggedIn from:body"
-    hx-swap="outerHTML">
+<div hx-get="/component/content" hx-trigger="load, userLoggedIn from:body, userLoggedOut from:body">
     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
         dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
         clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
