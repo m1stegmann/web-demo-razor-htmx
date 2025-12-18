@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This is an **ASP.NET Core 9.0 Razor Pages** demo application showcasing **HTMX** integration patterns. The app demonstrates dynamic content loading, custom event-driven architecture, and out-of-band (OOB) swaps using HTMX with Tailwind CSS for styling.
+This is an **ASP.NET Core 10.0 Razor Pages** demo application showcasing **HTMX** integration patterns. The app demonstrates dynamic content loading, custom event-driven architecture, and out-of-band (OOB) swaps using HTMX with Tailwind CSS for styling.
 
 ## Architecture Patterns
 
