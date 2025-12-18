@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc.Razor;
-using WebsiteDemo.ViewComponents;
+using WebsiteDemo.Infrastructure.Razor;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();

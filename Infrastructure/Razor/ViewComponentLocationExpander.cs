@@ -1,4 +1,4 @@
-namespace WebsiteDemo.ViewComponents;
+namespace WebsiteDemo.Infrastructure.Razor;
 
 using Microsoft.AspNetCore.Mvc.Razor;
 
@@ -19,7 +19,10 @@ sealed class ViewComponentLocationExpander : IViewLocationExpander
                 var componentName = parts[1]; // z.B. "Teaser"
                 return new[] {
                     $"/ViewComponents/{componentName}View.cshtml",
-                    $"/ViewComponents/{componentName}.cshtml"
+                    $"/ViewComponents/{componentName}.cshtml",
+                    $"/ViewComponents/{componentName}/{componentName}View.cshtml",
+                    $"/ViewComponents/{componentName}/{componentName}.cshtml",
+                    $"/ViewComponents/{componentName}/Default.cshtml",
                     }.Concat(viewLocations);
             }
         }
