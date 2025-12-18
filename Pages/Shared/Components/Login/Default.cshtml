@@ -1,5 +1,4 @@
-@page "/component/login"
-@model web_demo.Pages.Component.LoginModel
+@model (string DisplayText, string NextStatus, string CurrentPath)
 <button hx-get="@Model.CurrentPath?status=@Model.NextStatus" hx-swap="outerHTML"
     class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600" data-login-status="@Model.NextStatus">
     @Model.DisplayText

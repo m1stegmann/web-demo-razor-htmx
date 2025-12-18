@@ -13,7 +13,9 @@
     <div class="flex-1 h-24 bg-blue-600">
         @await Component.InvokeAsync("Teaser")
     </div>
-    <div class="flex-1 h-24 bg-blue-600" hx-get="/component/teaser-vc" hx-trigger="load delay:3s, every 15s"></div>
+    <div class="flex-1 h-24 bg-blue-600" hx-get="/component/teaser" hx-trigger="load delay:3s, every 15s">
+        lazy loading after 5s and refreshing every 15s
+    </div>
     <div class="flex-1 h-24 bg-blue-600" hx-get="/component/basket" hx-trigger="load"></div>
     <div class="flex-1 h-24 bg-red-600" hx-get="/component/favorites" hx-trigger="userLoggedIn from:body"></div>
 </div>

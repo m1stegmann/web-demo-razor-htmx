@@ -1,7 +1,5 @@
-@page "/component/paidcontent"
-@model web_demo.Pages.Component.PaidContentModel
-
-@if (Model.IsLoggedIn)
+@model bool
+@if (Model)
 {
     <div class="w-full h-96 bg-red-600 p-4">
         <p>Main content - Last loaded: @DateTime.Now.ToString("HH:mm:ss")</p>
