@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace web_demo.ViewComponents;
+namespace WebsiteDemo.ViewComponents;
 
-public class PaidContentViewComponent : ViewComponent
+public class ContentViewComponent : ViewComponent
 {
     public IViewComponentResult Invoke()
     {

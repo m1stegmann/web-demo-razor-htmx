@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace web_demo.ViewComponents;
+namespace WebsiteDemo.ViewComponents;
 
 public class LoginViewComponent : ViewComponent
 {

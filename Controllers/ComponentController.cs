@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace web_demo.Controllers;
+namespace WebsiteDemo.Controllers;
 
 public class ComponentController : Controller
 {
