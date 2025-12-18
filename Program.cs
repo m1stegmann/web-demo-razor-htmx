@@ -7,7 +7,7 @@ builder.Services.AddControllers();
 
 builder.Services.Configure<RazorViewEngineOptions>(o =>
 {
-    o.ViewLocationExpanders.Add(new FlatViewComponentLocationExpander());
+    o.ViewLocationExpanders.Add(new CustomViewComponentLocationExpander());
 });
 
 var app = builder.Build();
