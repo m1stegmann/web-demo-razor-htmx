@@ -1,0 +1,5 @@
+@model (string Title, string Content)
+<div class="p-4">
+    <h1>@Model.Title</h1>
+    <p>@Model.Content<br />Last loaded: @DateTime.Now.ToString("HH:mm:ss")</p>
+</div>
