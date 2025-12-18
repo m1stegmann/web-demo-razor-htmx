@@ -8,7 +8,7 @@ public class PaidContentViewComponent : ViewComponent
     {
         string? loginCookie = Request.Cookies["login"];
         bool isLoggedIn = loginCookie == "true";
-        
+
         return View(isLoggedIn);
     }
 }
