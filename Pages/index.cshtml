@@ -2,23 +2,6 @@
 @{
     ViewData["Title"] = "HTMX Demo";
 }
-<div class="flex gap-2">
-    <div class="w-4/5 h-12 bg-blue-600"></div>
-    <div class="w-1/5 h-12 bg-red-600" hx-get="/component/login" hx-trigger="load">
-    </div>
-</div>
-
-<div class="flex gap-2">
-    <div class="flex-1 h-24 bg-blue-600">
-        <vc:teaser></vc:teaser>
-    </div>
-    <div class="flex-1 h-24 bg-blue-600" hx-get="/component/teaser" hx-trigger="load delay:3s, every 15s">
-        lazy loading after 5s and refreshing every 15s
-    </div>
-    <div class="flex-1 h-24 bg-blue-600" hx-get="/component/basket" hx-trigger="load"></div>
-    <div class="flex-1 h-24 bg-red-600" hx-get="/component/favorites" hx-trigger="userLoggedIn from:body"></div>
-</div>
-
 <div class="w-full bg-blue-600 p-4">
     <ul>
         <li><a href="/testpage">Testpage</a></li>
